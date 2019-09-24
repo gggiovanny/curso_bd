@@ -15,7 +15,11 @@ Documentacion(alli esta el link base y los endpoints) : https://jsonplaceholder.
 + Documentacion (alli esta el link base y los endpoints): https://github.com/gggiovanny/dicas-auditorias-api
 
 #### Links de SQL
++ 
 
 #### Links de REST API
++ https://hackernoon.com/restful-api-designing-guidelines-the-best-practices-60e1d954e7c9
++ 
 
-#### Cosas para instalar
+#### Instalacion de laravel
++ https://medium.com/@david.quezada.m/tutorial-api-restful-con-laravel-5-6-en-menos-de-1000-palabras-e14249fef9a9
