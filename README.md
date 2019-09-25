@@ -69,3 +69,29 @@ php artisan route:list
 
 + Link util: https://fideloper.com/laravel-raw-queries
 + Otro link util: https://likegeeks.com/es/errores-en-diseno-de-base-de-datos/
+### Cosas random
++ Tipo de dato para fecha recomendado para mysql: `timestamp`.
++ Valor para obtener la fecha actual y ponerla por defecto: `current_timestamp`
++ Ejemplo 
+```
+CREATE TABLE auditorias (
+	idAuditoria smallint not null auto_increment,
+    idUser int(11) not null,
+    descripcion varchar(255) null,
+    fechaCreacion timestamp not null default current_timestamp,
+    
+    idEmpresa int(11) null,
+    idDepartamento int(11) null,
+    idClasificacion int(11) null,
+    
+    terminada bit not null default 0,
+    fechaGuardada timestamp null,
+    
+    PRIMARY KEY (idAuditoria),
+    FOREIGN KEY (idUser) REFERENCES users(id),
+    FOREIGN KEY (idEmpresa) REFERENCES empresas(idEmpresa),
+    FOREIGN KEY (idDepartamento) REFERENCES departamentos(idDepartamento),
+    FOREIGN KEY (idClasificacion) REFERENCES clasificaciones(idClasificacion)    
+);
+```
+
