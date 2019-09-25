@@ -68,3 +68,4 @@ php artisan route:list
 + Ruta para consultar las tablas: http://localhost/laravel/public/api/nombre_tabla
 
 + Link util: https://fideloper.com/laravel-raw-queries
++ Otro link util: https://likegeeks.com/es/errores-en-diseno-de-base-de-datos/
