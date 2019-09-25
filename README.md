@@ -45,21 +45,22 @@ DB_USERNAME=root
 DB_PASSWORD=
 [...]
 ```
-4. Comando para crear controller:
-```
-php artisan make:controller nombreController -r
-```
-
 ##### Link que puede ayudar
 + https://medium.com/@david.quezada.m/tutorial-api-restful-con-laravel-5-6-en-menos-de-1000-palabras-e14249fef9a9
 
 # Miercoles
-#### Archivo .htaccess
+1. Teniendo una consola abierta en la ruta del proyecto, crear un archivo controlador con el siguiente comando:
 ```
-# Turn rewrite engine on
-Options +FollowSymlinks
-RewriteEngine on
-
-# Rewrite all those to insert /folder
-RewriteRule ^(.*)$ /api/public/api/$1 [L]
+php artisan make:controller tablaController -r
 ```
+2. Luego agregar el archivo `laravel/routes/api.php`:
+```
+Route::apiResource('nombre_tabla', 'tablaController');   
+```
+3. Guardar y verificar que se halla echo correctamente con el comando
+```
+php artisan route:list
+```
+4. Ahora editar el archivo controlador. Seguir las indicaciones de los senseis.
++ Funcion para hacer select: `DB::select( DB::raw("SELECT * FROM nombre_tabla"))`.
++ Funcion para hacer inserts o en general sentencias que no regresen ningun valor: `DB::statement( "INSERT INTO tabla VALUES (17, 'algoxd')" )`
