@@ -73,7 +73,7 @@ php artisan route:list
 + Tipo de dato para fecha recomendado para mysql: `timestamp`.
 + Valor para obtener la fecha actual y ponerla por defecto: `current_timestamp`
 + Ejemplo 
-```
+```sql
 CREATE TABLE auditorias (
 	idAuditoria smallint not null auto_increment,
     idUser int(11) not null,
