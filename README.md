@@ -34,7 +34,8 @@
 composer create-project laravel/laravel
 ```
   Aqui se descargaran los archivos necesarios y se creara el proyecto en una carpeta llamada *laravel*. Esta carpeta puede ser      renombrada posteriormente.
-3. Lo siguiente es modificar el archivo .env que se encuentra en la raíz de nuestro proyecto para que tenga los datos de la conexion de nuestra base de datos. Deberia quedar asi dicha seccion (para los valores por defecto de xampp, cambienlo si cambiaron contraseñas):
+3. Ruta para checar que se instalo bien el laravel: http://localhost/laravel/public/
+4. Lo siguiente es modificar el archivo .env que se encuentra en la raíz de nuestro proyecto para que tenga los datos de la conexion de nuestra base de datos. Deberia quedar asi dicha seccion (para los valores por defecto de xampp, cambienlo si cambiaron contraseñas):
 ```
 [...]
 DB_CONNECTION=mysql
@@ -64,3 +65,4 @@ php artisan route:list
 4. Ahora editar el archivo controlador. Seguir las indicaciones de los senseis.
 + Funcion para hacer select: `DB::select( DB::raw("SELECT * FROM nombre_tabla"))`.
 + Funcion para hacer inserts o en general sentencias que no regresen ningun valor: `DB::statement( "INSERT INTO tabla VALUES (17, 'algoxd')" )`
++ Ruta para consultar las tablas: http://localhost/laravel/public/api/nombre_tabla
