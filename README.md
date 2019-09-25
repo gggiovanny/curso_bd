@@ -43,6 +43,12 @@ DB_DATABASE=test
 DB_USERNAME=root
 DB_PASSWORD=
 [...]
+4. Comando para crear controller:
+```
+php artisan make:controller nombreController -r
+```
+
+##### Link que puede ayudar
 + https://medium.com/@david.quezada.m/tutorial-api-restful-con-laravel-5-6-en-menos-de-1000-palabras-e14249fef9a9
 
 # Miercoles
