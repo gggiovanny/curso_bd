@@ -55,7 +55,7 @@ DB_PASSWORD=
 php artisan make:controller tablaController -r
 ```
 2. Luego agregar el archivo `laravel/routes/api.php`:
-```
+```php
 Route::apiResource('nombre_tabla', 'tablaController');   
 ```
 3. Guardar y verificar que se halla echo correctamente con el comando
