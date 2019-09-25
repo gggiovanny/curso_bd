@@ -66,3 +66,5 @@ php artisan route:list
 + Funcion para hacer select: `DB::select( DB::raw("SELECT * FROM nombre_tabla"))`.
 + Funcion para hacer inserts o en general sentencias que no regresen ningun valor: `DB::statement( "INSERT INTO tabla VALUES (17, 'algoxd')" )`
 + Ruta para consultar las tablas: http://localhost/laravel/public/api/nombre_tabla
+
++ Link util: https://fideloper.com/laravel-raw-queries
