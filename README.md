@@ -6,7 +6,6 @@
 + https://www.getpostman.com/
 + https://dev.mysql.com/downloads/workbench/
 + https://getcomposer.org/
-+ https://getcomposer.org/
 
 # Martes:
 #### Links de SQL
@@ -24,6 +23,26 @@
 + Video que seria chido que vieran en su casita: https://www.youtube.com/watch?v=u2Ms34GE14U
 
 #### Instalacion de laravel
+1. Ubicarse con una consola en la carpeta de archivos web del servidor web de xampp y abrir una consola alli. La ruta por defecto de dicha carpeta en windows es `C:\\xampp\htdocs`.
+  + Pueden abrir esa carpeta en el explorador de archivos y presionar `shift + click derecho` en cualquier espacio vacio y en el menu contextual les va a aparecer "Abrir consola de comandos aqui" o "Abrir powershell aqui".
+  +  Pueden apretar `tecla windows + r` y escribir `cmd` en la ventana de ejecutar que se abre. Una vez en la consola, escribir 
+  ```
+  cd C:\\xampp\htdocs
+  ```
+2. Teniendo instalado [composer](https://getcomposer.org/) previamente, ejecutar en consola:
+```
+composer create-project laravel/laravel
+```
+  Aqui se descargaran los archivos necesarios y se creara el proyecto en una carpeta llamada *laravel*. Esta carpeta puede ser      renombrada posteriormente.
+3. Lo siguiente es modificar el archivo .env que se encuentra en la raíz de nuestro proyecto para que tenga los datos de la conexion de nuestra base de datos. Deberia quedar asi dicha seccion (para los valores por defecto de xampp, cambienlo si cambiaron contraseñas):
+[...]
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=test
+DB_USERNAME=root
+DB_PASSWORD=
+[...]
 + https://medium.com/@david.quezada.m/tutorial-api-restful-con-laravel-5-6-en-menos-de-1000-palabras-e14249fef9a9
 
 # Miercoles
