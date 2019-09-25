@@ -35,6 +35,7 @@ composer create-project laravel/laravel
 ```
   Aqui se descargaran los archivos necesarios y se creara el proyecto en una carpeta llamada *laravel*. Esta carpeta puede ser      renombrada posteriormente.
 3. Lo siguiente es modificar el archivo .env que se encuentra en la raíz de nuestro proyecto para que tenga los datos de la conexion de nuestra base de datos. Deberia quedar asi dicha seccion (para los valores por defecto de xampp, cambienlo si cambiaron contraseñas):
+```
 [...]
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -43,6 +44,7 @@ DB_DATABASE=test
 DB_USERNAME=root
 DB_PASSWORD=
 [...]
+```
 4. Comando para crear controller:
 ```
 php artisan make:controller nombreController -r
