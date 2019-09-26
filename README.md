@@ -94,4 +94,43 @@ CREATE TABLE auditorias (
     FOREIGN KEY (idClasificacion) REFERENCES clasificaciones(idClasificacion)    
 );
 ```
+# Reto
+CREAR TABLAS EN SU DB CON LA TEMATICA DE UN RESTAURANTE
+RECUERDA QUE UN RESTAURANTE NECESITA TENER INFORMACION DE LA LOS PLATILLOS,
+DE LAS ORDENES QUE SE HICIERON EN EL DÍA
+E INFORMACION DE LAS MESAS
 
+
+Tipo de dato para fecha recomendado para mysql: timestamp.
+Valor para obtener la fecha actual y ponerla por defecto: current_timestamp
+
+Tipo de dato para dinero: decimal(15,2)
+## Una posible respuesta
+```sql
+CREATE TABLE PLATILLO (
+	idPlatillo smallint AUTO_INCREMENT NOT NULL,
+    nombre varchar(255) NOT NULL,
+    precio decimal(15, 2),
+    estatus bit not null default 1,
+    
+    CONSTRAINT PK_PLATILLO PRIMARY KEY (idPlatillo)   
+);
+
+CREATE TABLE PEDIDO (
+	idPedido int AUTO_INCREMENT NOT NULL,
+    mesa tinyint NOT NULL,
+	fecha timestamp NOT NULL DEFAULT current_timestamp,
+    
+    CONSTRAINT PK_PEDIDO PRIMARY KEY (idPedido)
+);
+
+CREATE TABLE PEDIDO_PLATILLOS (
+    idPedido int NOT NULL,
+    idPlatillo smallint NOT NULL,
+    cantidad tinyint NOT NULL DEFAULT 1,
+    
+    CONSTRAINT FK_PEDIDO_PLATILLOS_PEDIDO FOREIGN KEY(idPedido) REFERENCES PEDIDO(idPedido),
+    CONSTRAINT FK_PEDIDO_PLATILLOS_PLATILLO FOREIGN KEY(idPlatillo) REFERENCES PLATILLO(idPlatillo),
+	CONSTRAINT PK_PEDIDO_PLATILLOS PRIMARY KEY (idPedido, idPlatillo)
+);
+```
